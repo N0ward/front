@@ -4,7 +4,6 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
 
-  // Добавление новой задачи
   const addTask = (e) => {
     e.preventDefault();
     if (newTask.trim() === '') return;
@@ -12,7 +11,6 @@ function App() {
     setNewTask('');
   };
 
-  // Удаление задачи
   const deleteTask = (index) => {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
